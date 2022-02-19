@@ -6,7 +6,7 @@
 
 > Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes. (Refactoring Guru)
 
-> An abstract factory is called a factory of factories. In this pattern, you provide a way to encapsulate a group of individual factories that have a common theme. In this process, you do not mention or specify their concrete classes. (Vaskaran Sarcar, DesignPatterns in C#)
+> An abstract factory is called a factory of factories. In this pattern, you provide a way to encapsulate a group of individual factories that have a common theme. In this process, you do not mention or specify their concrete classes. (Sarcar, 2018)
 
 :boom: Create the same type of products (Not the same product!) but in different ways or Factories.  
 
@@ -53,3 +53,7 @@ or
 <!-- Cons -->
 
 :x: The code may become more complicated than it should be, since a lot of new interfaces and classes are introduced along with the pattern.
+
+## My Abstract Factory Example
+
+![abstract-factory-burgers](images/abstract-factory-burgers.png)
