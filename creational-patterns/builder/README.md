@@ -6,7 +6,7 @@
 
 > Builder is a creational design pattern that lets you construct complex objects step by step. The pattern allows you to produce different types and representations of an object using the same construction code. (Refactoring Guru)
 
-> Separate the construction of a complex object from its representation so that the same construction processes can create different representations. (Vaskaran Sarcar, DesignPatterns in C#)
+> Separate the construction of a complex object from its representation so that the same construction processes can create different representations. (Sarcar, 2018)
 
 :boom: Assembly and Return (Build) the same Product but in different ways (or using different Parts).
 
@@ -41,3 +41,7 @@
 <!-- Cons -->
 
 :x: The overall complexity of the code increases since the pattern requires creating multiple new classes.
+
+## My Builder Example
+
+![builder-chef-menu](images/builder-chef-menu.png)
