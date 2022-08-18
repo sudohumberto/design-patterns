@@ -24,16 +24,16 @@ Image from Refactoring Guru.
 
 * `IBuilder`: specifies an abstract interface for creating parts of a `Product` object
   * example 1: `IVehiclesBuilder`
-  * example 2:
+  * example 2: `ISushiBuilder`
 * `ConcreteBuilder`: constructs and assembles parts of the product by implementing the `IBuilder` interface. Defines and keeps track of the representation it creates. Provides an interface for retrieving the `Product`
   * example 1: `MotorcycleBuilder`, `CarBuilder`
-  * example 2: 
+  * example 2: `MakiBuilder`, `UramakiBuilder`
 * `Director`: constructs an object using the `IBuilder` interface
   * example 1: `BMWDirector`, `SuzukiDirector`
-  * example 2: 
+  * example 2: `KyotoDirector`
 * `Product`: represents the complex object under construction. `ConcreteBuilder` builds the product's internal representation and defines the process by which it's assembled. Includes classes that define the constituent parts, including interfaces for assembling the parts into the final result
-  * example 1: `Motorcycle`,`Vehicle`
-  * example 2: 
+  * example 1: `Vehicle`
+  * example 2: `Sushi`
 
 ## Examples
 
