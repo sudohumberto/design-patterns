@@ -1,46 +1,63 @@
 # Abstract Factory
 
+## Definition
+
+:fire: An abstract factory defines the abstract products that can be created, but the concrete factories implement the specific way in which the concrete products are created.
+All concrete factories implement the abstract factory. All the concrete products implement the abstract products.
+
 ![abstract-factory-en](images/abstract-factory-en.png)
+Image from Refactoring Guru.
 
-> The Abstract Factory design pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes. (dofactory)
 
-> Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes. (Refactoring Guru)
 
-> An abstract factory is called a factory of factories. In this pattern, you provide a way to encapsulate a group of individual factories that have a common theme. In this process, you do not mention or specify their concrete classes. (Sarcar, 2018)
+> [dofactory](https://www.dofactory.com/net/design-patterns): 
+> The Abstract Factory design pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes. 
 
-:boom: Create the same type of products (Not the same product!) but in different ways or Factories.  
+> [Refactoring Guru](https://refactoring.guru/design-patterns/catalog):
+> Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes.  
 
 ## UML
 
-![abstract-factory-uml](images/abstract-factory-uml.png)
-
-or
-
-![abstract-factory-structure](images/abstract-factory-structure.png)
+<p align="center">
+	<img src="images/AbstractFactoryUML.png" alt="abstract-factory-uml">
+</p>
 
 ## Participants
 
-* AbstractFactory (`AnimalFactory`): 
-	* declares an interface for operations that create abstract products
-* ConcreteFactory (`AfricaFactory`, `AmericaFactory`):
-	* implements the operations to create concrete product objects
-* AbstractProduct (`Herbivore`, `Carnivore`): 
-	* declares an interface for a type of product object
-* Product (`Giraffe`, `Lion`, `Bison`, `Wolf`): 
-	* defines a product object to be created by the corresponding concrete factory
-	* implements the AbstractProduct interface
-* Client (`AnimalWorld`):
-	* uses interfaces declared by AbstractFactory and AbstractProduct classes
+* `AbstractFactory`: declares an interface for operations that create abstract products.
+  * example 1: `AnimalsFactory`
+  * example 2: `FastFoodFactory`
+* `ConcreteFactory`: implements the operations to create concrete product objects
+  * example 1: `AmericanFactory`, `AfricanFactory`
+  * example 2: `McDonaldsFactory`, `WendysFactory`, `BurgerKingFactory`
+* `AbstractProduct`: declares an interface for a type of product object
+  * example 1: `Herbivore`, `Carnivore`
+  * example 2: `Burger`,`Fries`
+* (Concrete) `Product`: defines a product object to be created by the corresponding concrete factory. Implements the AbstractProduct interface.
+  * example 1: `Giraffe`, `Lion`, `Bison`, `Wolf`
+  * example 2: `BigMac`,`McFries`, `Baconator`,`ChilliFries`,`Whopper`,`ClassicFries`
+* `Client`: uses interfaces declared by AbstractFactory and AbstractProduct classes
+  * example 1: `Zoo`
+  * example 2: `Customer`
 
-|							|AfricaFactory (ConcreteFactory)	|AmericaFactory (ConcreteFactory)	|
-|---------------------------|-----------------------------------|-----------------------------------|
-|Herbivore (AbstractProduct)|Giraffe (ConcreteProduct)			|Bison (ConcreteProduct)			|
-|Carnivore (AbstractProduct)|Lion (ConcreteProduct)				|Wolf (ConcreteProduct)				|
 
+## Examples
+
+### Example 1: AnimalsFactory
+
+<p align="center">
+	<img src="images/AbstractFactory1.png" alt="abstract-factory-1">
+</p>
+
+### Example 2: FastFoodFactory
+
+<p align="center">
+	<img src="images/AbstractFactory2.png" alt="abstract-factory-2">
+</p>
 
 ## Pros and Cons
 
-<!-- Pros -->
+### Pros
 
 :heavy_check_mark: You can be sure that the products you’re getting from a factory are compatible with each other.
 
@@ -50,10 +67,6 @@ or
 
 :heavy_check_mark: **Open/Closed Principle**. You can introduce new variants of products without breaking existing client code.
 
-<!-- Cons -->
+### Cons
 
 :x: The code may become more complicated than it should be, since a lot of new interfaces and classes are introduced along with the pattern.
-
-## My Abstract Factory Example
-
-![abstract-factory-burgers](images/abstract-factory-burgers.png)

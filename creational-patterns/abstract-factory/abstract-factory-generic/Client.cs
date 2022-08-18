@@ -1,20 +1,16 @@
 
 /// <summary>
-/// Uses interfaces declared by AbstractFactory and AbstractProduct classes
-/// It does not have access to any Concrete Factory nor product
+/// Uses AbstractFactory and AbstractProduct
+/// It does not have direct access to any Concrete Factory or product
 /// </summary>
-class Client
+public class Client
 {
-    private AbstractProductA _abstractProductA;
-    private AbstractProductB _abstractProductB;
-    // Constructor
+    public AbstractProductA AbstractProductA { get; set; }
+    public AbstractProductB AbstractProductB { get; set; }
+
     public Client(AbstractFactory factory)
     {
-        _abstractProductB = factory.CreateProductB();
-        _abstractProductA = factory.CreateProductA();
-    }
-    public void Run()
-    {
-        _abstractProductB.Interact(_abstractProductA);
+        AbstractProductB = factory.CreateProductB();
+        AbstractProductA = factory.CreateProductA();
     }
 }

@@ -3,6 +3,10 @@
 /// Defines a product object to be created by the corresponding concrete factory (factory 1)
 /// Implements the AbstractProduct interface
 /// </summary>
-class ProductA1 : AbstractProductA
+public class ProductA1 : AbstractProductA
 {
+    public override string ToString()
+    {
+        return "ProductA1";
+    }
 }

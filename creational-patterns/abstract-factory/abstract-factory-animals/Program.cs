@@ -3,12 +3,12 @@ System.Console.WriteLine("Hello Abstract Factory in Real World!");
 
 // Create and run the African animal world
 
-AnimalFactory africa = new AfricaFactory();
-AnimalWorld world = new AnimalWorld(africa);
-world.RunFoodChain();
+AnimalsFactory africanFactory = new AfricaFactory();
+Zoo africanZoo = new Zoo(africanFactory);
+africanZoo.RunFoodChain();
 
 // Create and run the American animal world
 
-AnimalFactory america = new AmericaFactory();
-world = new AnimalWorld(america);
-world.RunFoodChain();
+AnimalsFactory americanFactory = new AmericaFactory();
+Zoo americanZoo = new Zoo(americanFactory);
+americanZoo.RunFoodChain();

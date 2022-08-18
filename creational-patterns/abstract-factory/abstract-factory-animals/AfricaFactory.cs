@@ -3,7 +3,7 @@
 /// Concrete Factory 1
 /// Implements the operations to create concrete animals from Africa
 /// </summary>
-class AfricaFactory : AnimalFactory
+public class AfricaFactory : AnimalsFactory
 {
     public override Herbivore CreateHerbivore()
     {

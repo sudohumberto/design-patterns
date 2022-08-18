@@ -4,7 +4,7 @@
 /// Defines an animal object to be created by the corresponding concrete factory (AmericaFactory)
 /// Implements the AbstractProduct (Carnivore) interface
 /// </summary>
-class Wolf : Carnivore
+public class Wolf : Carnivore
 {
     public override void Eat(Herbivore h)
     {

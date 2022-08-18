@@ -3,7 +3,7 @@
 /// Concrete Factory 2
 /// Implements the operations to create concrete animals from America
 /// </summary>
-class AmericaFactory : AnimalFactory
+public class AmericaFactory : AnimalsFactory
 {
     public override Herbivore CreateHerbivore()
     {
