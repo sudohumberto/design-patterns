@@ -1,16 +1,23 @@
 ﻿Console.WriteLine("Hello Builder!");
 
+// Clients can create Products in two different ways:
+
+// Option A: using the Director
+
 Director director = new Director();
 
-Builder b1 = new ConcreteBuilder1();
-Builder b2 = new ConcreteBuilder2();
+IBuilder builder1 = new ConcreteBuilder1();
+IBuilder builder2 = new ConcreteBuilder2();
 
-// Construct two products
+Product productABC = director.BuildProductABC(builder1);
+productABC.Show();
 
-director.Construct(b1);
-Product p1 = b1.GetResult();
-p1.Show();
+// Option B: create a custom product from the builder
 
-director.Construct(b2);
-Product p2 = b2.GetResult();
-p2.Show();
+builder2.Reset();
+builder2.BuildPartA();
+builder2.BuildPartB();
+builder2.BuildPartB();
+builder2.BuildPartA();
+Product productABBA = builder2.GetProduct();
+productABBA.Show();

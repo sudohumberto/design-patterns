@@ -4,18 +4,31 @@
 /// Defines and keeps track of the representation it creates 
 /// Provides an interface for retrieving the product
 /// </summary>
-class ConcreteBuilder1 : Builder
+class ConcreteBuilder1 : IBuilder
 {
-    private Product _product = new Product();
-    public override void BuildPartA()
+    private Product _product = new();
+
+    public void Reset()
     {
-        _product.Add("PartA");
+        _product.Reset();
     }
-    public override void BuildPartB()
+    
+    public void BuildPartA()
     {
-        _product.Add("PartB");
+        _product.Add("PartA1");
     }
-    public override Product GetResult()
+
+    public void BuildPartB()
+    {
+        _product.Add("PartB1");
+    }
+
+    public void BuildPartC()
+    {
+        _product.Add("PartC1");
+    }
+
+    public Product GetProduct()
     {
         return _product;
     }

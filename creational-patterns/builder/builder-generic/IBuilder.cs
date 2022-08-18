@@ -3,9 +3,11 @@
 /// Specifies an abstract interface for creating parts of a Product object
 /// Different builders execute the same task in various ways.
 /// </summary>
-abstract class Builder
+interface IBuilder
 {
-    public abstract void BuildPartA();
-    public abstract void BuildPartB();
-    public abstract Product GetResult();
+    public void Reset();
+    public void BuildPartA();
+    public void BuildPartB();
+    public void BuildPartC();
+    public Product GetProduct();
 }

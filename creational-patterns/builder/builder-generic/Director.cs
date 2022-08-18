@@ -6,9 +6,20 @@
 class Director
 {
     // Builder uses a complex series of steps
-    public void Construct(Builder builder)
+    public Product BuildProductABC(IBuilder builder)
     {
+        builder.Reset();
         builder.BuildPartA();
         builder.BuildPartB();
+        builder.BuildPartC();
+        return builder.GetProduct();
+    }
+
+    // Builder uses a complex series of steps
+    public Product BuildProductB(IBuilder builder)
+    {
+        builder.Reset();
+        builder.BuildPartB();
+        return builder.GetProduct();
     }
 }
