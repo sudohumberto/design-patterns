@@ -7,5 +7,5 @@
 /// </summary>
 abstract class Creator
 {
-    public abstract Product FactoryMethod();
+    public abstract IProduct FactoryMethod();
 }

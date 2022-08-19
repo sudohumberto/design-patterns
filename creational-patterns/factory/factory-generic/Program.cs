@@ -11,6 +11,6 @@ creators[1] = new ConcreteCreatorB();
 // Iterate over creators and create products
 foreach (Creator creator in creators)
 {
-    Product product = creator.FactoryMethod();
+    IProduct product = creator.FactoryMethod();
     Console.WriteLine("Created {0}", product.GetType().Name);
 }

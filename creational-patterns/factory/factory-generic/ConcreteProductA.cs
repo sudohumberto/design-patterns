@@ -2,6 +2,10 @@
 /// <summary>
 /// A 'ConcreteProduct' class
 /// </summary>
-class ConcreteProductA : Product
+class ConcreteProductA : IProduct
 {
+    public string Operation()
+    {
+        return "{Result of ConcreteProductA}";
+    }
 }

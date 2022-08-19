@@ -4,7 +4,7 @@
 /// </summary>
 class ConcreteCreatorB : Creator
 {
-    public override Product FactoryMethod()
+    public override IProduct FactoryMethod()
     {
         return new ConcreteProductB();
     }
