@@ -35,7 +35,7 @@
 </p>
 
 
-### Example 2: 
+### Example 2: Plants
 
 <p align="center">
 	<img src="images/Prototype2.png" alt="prototype 2">

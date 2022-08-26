@@ -1,29 +1,46 @@
 # Singleton
 
+:fire: There is only one instance of a class, and it provide the same object to every client that needs it.
+
 ![singleton](images/singleton.png)
 
-> The Singleton design pattern ensures a class has only one instance and provide a global point of access to it. (dofactory)
+> [dofactory](https://www.dofactory.com/net/design-patterns): 
+> The Singleton design pattern ensures a class has only one instance and provide a global point of access to it.
 
-> Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance. (Refactoring Guru)
-
-> Ensure a class has only one instance, and provide a global point of access to it. (Sarcar, 2018)
-
-:boom: .
+> [Refactoring Guru](https://refactoring.guru/design-patterns/catalog):
+> Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.
 
 ## UML
 
-![structure-en-indexed](images/structure-en-indexed.png)
-
+<p align="center">
+	<img src="images/SingletonUML.png" alt="singleton uml">
+</p>
 
 ## Participants
 
-* Singleton (`LoadBalancer`)
-    * defines an Instance operation that lets clients access its unique instance. Instance is a class operation.
-    * responsible for creating and maintaining its own unique instance.
+* `Singleton`: defines an Instance operation that lets clients access its unique instance. Instance is a class operation. Responsible for creating and maintaining its own unique instance.
+  * example 1: `Printer`
+  * example 2: `LogManager`
+
+## Examples
+
+### Example 1: Printer
+
+<p align="center">
+	<img src="images/Singleton1.png" alt="singleton 1">
+</p>
+
+
+### Example 2: Log Manager
+
+<p align="center">
+	<img src="images/Singleton2.png" alt="singleton 2">
+</p>
+
 
 ## Pros and Cons
  
-<!-- Pros -->
+### Pros
 
 :heavy_check_mark: You can be sure that a class has only a single instance.
 
@@ -31,7 +48,7 @@
 
 :heavy_check_mark: The singleton object is initialized only when it’s requested for the first time.
 
-<!-- cons -->
+### Cons
 
 :x: Violates the Single Responsibility Principle. The pattern solves two problems at the time.
 
