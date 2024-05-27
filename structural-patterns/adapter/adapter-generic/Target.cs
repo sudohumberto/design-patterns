@@ -1,10 +1,7 @@
 /// <summary>
 /// Defines the domain-specific interface that Client uses.
 /// </summary>
-public class Target
+public interface Target
 {
-    public virtual void Request()
-    {
-        Console.WriteLine("Called Target Request()");
-    }
+    void Request();
 }
